@@ -34,8 +34,14 @@
                                     <constraint firstItem="gNe-Kz-RVc" firstAttribute="centerX" secondItem="tne-Wc-2Ra" secondAttribute="centerX" id="9dV-Ag-jwu"/>
                                 </constraints>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqg-RL-roi"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqg-RL-roi">
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rx6-Xj-h33"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9Am-0M-uL4"/>
+                                </connections>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9t-CE-N2h">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="46"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,13 +84,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fruitPicker" destination="Hqg-RL-roi" id="ema-Ns-8rf"/>
                         <outlet property="resultLabel" destination="z9t-CE-N2h" id="jR8-KO-Jss"/>
                         <outlet property="spinButton" destination="OrZ-qi-3Ge" id="j09-Jd-I6p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="386.5"/>
+            <point key="canvasLocation" x="38" y="237"/>
         </scene>
     </scenes>
 </document>
